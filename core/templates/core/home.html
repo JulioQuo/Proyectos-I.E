@@ -1,0 +1,438 @@
+
+{% extends 'core/ini.html' %}
+
+
+{% block contenido %}
+{% load static %}
+<div class="login-form-container">
+
+    <div id="close-login-btn" class="fas fa-times"></div>
+ 
+    
+</div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>Libros Destacados</h3>
+            <p>Encuentra aqui tus libros favoritos</p>
+            <a href="{% url 'galeria' %}" class="btn">Comprar Ahora</a>
+        </div>
+
+        <div class="swiper books-slider">
+            <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide"><img src="{% static 'core/img/hp2.jpg' %}" alt=""></a>
+                <a href="#" class="swiper-slide"><img src="{% static 'core/img/hp3.png' %}" alt=""></a>
+                <a href="#" class="swiper-slide"><img src="{% static 'core/img/mz1.jpg' %}" alt=""></a>
+                <a href="#" class="swiper-slide"><img src="{% static 'core/img/mz-2.jpg' %}" alt=""></a>
+                <a href="#" class="swiper-slide"><img src="{% static 'core/img/mz3.jpg' %}" alt=""></a>
+            </div>
+            <img src="{% static 'core/img/stand.png'%}" class="stand" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>Libros en Oferta</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'core/img/hp2.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Libros en Oferta</h3>
+                    <div class="price">Q.80.00 <span>Q.100.00</span></div>
+                    <a href="#" class="btn">Añadir al carrito </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'core/img/hp3.png' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Libros en Oferta</h3>
+                    <div class="price">Q.80.00 <span>Q.100.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'core/img/mz1.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Libros en Oferta</h3>
+                    <div class="price">Q.80.00 <span>Q.100.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'core/img/mz-2.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Libros en Oferta</h3>
+                    <div class="price">Q.80.00 <span>Q.100.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'core/img/mz3.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Libros en Oferta</h3>
+                    <div class="price">Q.80.00 <span>Q.100.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'core/img/jh1.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Libros en Oferta</h3>
+                    <div class="price">Q.80.00 <span>Q.100.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'core/img/jh2.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Libros en Oferta</h3>
+                    <div class="price">Q.80.00 <span>Q.100.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'core/img/jh3.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Libros en Oferta</h3>
+                    <div class="price">Q.80.00 <span>Q.100.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'core/img/sh1.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Libros en Oferta</h3>
+                    <div class="price">Q.80.00 <span>Q.100.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'core/img/sh2.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Libros en Oferta</h3>
+                    <div class="price">Q.80.00 <span>Q.100.00</span></div>
+                    <a href="#" class="btn">add to cart</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<!-- featured section ends -->
+
+<!-- newsletter section starts -->
+
+
+<!-- newsletter section ends -->
+
+<!-- arrivals section starts  -->
+
+<section class="arrivals" id="arrivals">
+
+    <h1 class="heading"> <span>Nuevos Ingresos</span> </h1>
+
+    <div class="swiper arrivals-slider">
+
+        <div class="swiper-wrapper">
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static 'core/img/hp2.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nuevos Lanzamientos</h3>
+                    <div class="price">Q.100.00 <span></span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static 'core/img/hp3.png' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nuevos Lanzamientos</h3>
+                    <div class="price">Q.100.00 <span></span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static 'core/img/jh1.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nuevos Lanzamientos</h3>
+                    <div class="price">Q.100.00 <span></span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static 'core/img/jh2.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nuevos Lanzamientos</h3>
+                    <div class="price">Q.100.00 <span></span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static 'core/img/jh3.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nuevos Lanzamientos</h3>
+                    <div class="price">Q.100.00 <span></span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="swiper arrivals-slider">
+
+        <div class="swiper-wrapper">
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static 'core/img/sh1.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nuevos Lanzamientos</h3>
+                    <div class="price">Q.100.00 <span></span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static 'core/img/sh2.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nuevos Lanzamientos</h3>
+                    <div class="price">Q.100.00 <span></span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static 'core/img/sh3.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nuevos Lanzamientos</h3>
+                    <div class="price">Q.100.00 <span></span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static 'core/img/mz1.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nuevos Lanzamientos</h3>
+                    <div class="price">Q.100.00 <span></span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static 'core/img/mz3.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nuevos Lanzamientos</h3>
+                    <div class="price">Q.100.00 <span></span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- arrivals section ends -->
+
+<!-- deal section starts  -->
+
+<section class="deal">
+
+    <div class="content">
+        <h3>Libro del Dia</h3>
+        <h1>50% de Descuento</h1>
+        <p>Encuentra cada dia un nuevo libro con descuento hasta del 50%</p>
+        <a href="{% url 'galeria' %}" class="btn">Comprar ahora</a>
+    </div>
+
+    <div class="image">
+        <img src="{% static 'core/img/sh2.jpg' %}" alt="">
+    </div>
+
+</section>
+{% endblock %}

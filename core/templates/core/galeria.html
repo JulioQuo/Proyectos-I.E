@@ -1,0 +1,31 @@
+{% extends 'core/ini.html' %}
+
+
+{% block contenido %}
+    {% load static %}
+    <div class="container gallery-container">
+
+        <h1>Galeria</h1>
+
+        <p class="page-description text-center">Libros en existencia</p>
+        
+        <div class="tz-gallery">
+
+            <div class="row">
+                {%for l in libros%}
+                    <div class="col-sm-6 col-md-4">
+                        {% if l.imagen %}
+                        <a href="{% url 'listado_libros' %}"><img src="{{ l.imagen.url }}" width="300" height="450" alt="Park" style="margin: 0px 0px 15px 0px"></a>
+                        {% else %}
+                        <a href="{% url 'listado_libros' %}"><img src="{% static 'core/img/no.jpg' %}" width="300" height="450" alt="Park" style="margin: 0px 0px 15px 0px"></a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div> 
+
+        </div>
+
+    </div>
+{% endblock %}
+
+

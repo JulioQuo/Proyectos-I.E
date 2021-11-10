@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CineLand</title>
+    {% load static %}
+    {% block css %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+      
+        <img src="{% static 'core/img/logo.png' %}" alt="Logo" class="logo">
+
+        <nav>
+                <ul>
+                        <li>
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'galeria' %}">Galeria</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'nuevo_libro' %}">Nuevo Libro</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'listado_libros' %}">Listado Libros</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li>
+                            <a href="#">USUARIO: {{ user.username }}</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'logout' %}">Cerrar Sesion</a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="{% url 'login' %}">Iniciar Sesion</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'registro_usuario' %}">Registrar</a>
+                        </li>
+                        {% endif %}
+                </ul>   
+        </nav>
+        
+    </header>
+
+    <div id="principal">
+        <br>
+        <div class="container">
+            {% block contenido %}
+
+
+
+
+            {% endblock %}
+        </div>
+    </div>
+
+    <footer class="hide_on_mobile">
+        <div>
+            <img src="{% static 'core/img/logo.png' %}" alt="logo" class="logo_footer">
+        </div>
+        <div>
+            <h4>Programación</h4>
+            <hr>
+            <ul>
+                <li>Cartelera</li>
+                <li>proximamente</li>
+                <li>Venta anticipada</li>
+            </ul>
+        </div>
+        <div>
+                <h4>Programación</h4>
+                <hr>
+                <ul>
+                    <li>Cartelera</li>
+                    <li>proximamente</li>
+                    <li>Venta anticipada</li>
+                </ul>
+        </div>
+        <div>
+                <h4>Programación</h4>
+                <hr>
+                <ul>
+                    <li>Cartelera</li>
+                    <li>proximamente</li>
+                    <li>Venta anticipada</li>
+                </ul>
+        </div>
+    </footer>
+
+    <!--footer mobile-->
+    <footer class="hide_on_desktop">
+        <img src="{% static 'core/img/logo.png' %}" alt="Logo" class="logo_footer_mobile">
+    </footer>
+
+    {% block java %}
+    {% endblock %}
+    <script src="{% static 'core/js/basico.js' %}"></script>
+</body>
+</html>

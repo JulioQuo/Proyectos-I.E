@@ -1,0 +1,17 @@
+{% extends 'core/ini.html' %}
+{% load crispy_forms_tags %}
+
+{% block contenido %}
+<div class="container">
+    <h2>Modificar Libro</h2>
+    <form action="" method="POST", enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        {{ form | crispy }}
+
+        <input type="reset" value="Limpiar" class="btn btn-info">
+        <input type="submit" value="Modificar" class="btn btn-success">
+    </form>
+    {{ mensaje }}
+</div>
+{% endblock %}

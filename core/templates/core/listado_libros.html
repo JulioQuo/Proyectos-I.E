@@ -1,0 +1,43 @@
+{% extends 'core/ini.html' %}
+{% load static %}
+
+{% block java %}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{% static 'core/js/confirmacion.js' %}"></script>
+{% endblock %}
+
+{% block contenido %}
+<div class="container">
+    <h2>Listado de Libros</h2>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Nombre</th>
+            <th>Autor</th>
+            <th>Año</th>
+            <th>Genero</th>
+            <th>Editorial</th>
+            <th>Paginas</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Opciones</th>
+        </tr>
+        {% for l in libro %}
+        <tr>
+            <td>{{ l.nombre }}</td>
+            <td>{{ l.autor }}</td>
+            <td>{{ l.año }}</td>
+            <td>{{ l.genero }}</td>
+            <td>{{ l.imprenta}}</td>
+            <td>{{ l.num_pag }}</td>
+            <td>{{ l.precio }}</td>
+            <td>{{ l.cantidad }}</td>
+            <td>
+                <a href="{% url 'modificar_libro' l.id %}">Modificar</a>
+                <a href="#" onclick="confirmarEliminacion({{l.id}})">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

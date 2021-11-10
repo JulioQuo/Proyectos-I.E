@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Book's for mind</title>
+    {% load static %}
+    {% block css %}
+    {% endblock %}
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+
+    <!-- custom css file link  -->
+    
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+ 
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div class="header-1">
+
+        <a href="#" class="logo"> <img src="{% static 'core/img/logo1.ico' %}" alt=""></i> Book's mind </a>
+
+        <div class="icons">
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="{% url 'carrito' %}" class="fas fa-shopping-cart"></a>
+            <div id="login-btn" class="#"></div>
+        </div>
+
+    </div>
+
+    <div class="header-2">
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Inicio</a>
+            <a href="{% url 'galeria' %}">Galeria</a>
+            <a href="{% url 'nuevo_libro' %}">Nuevo Libro</a>
+            <a href="{% url 'listado_libros' %}">Listado de Libros</a>
+	    {% if user.is_authenticated %}     
+                <a href="#"> Usuario: {{ user.username }}</a>
+                <a href="{% url 'logout' %}"> Cerrar sesion </a>
+            {% else %}
+                <a href="{% url 'login' %}"> Iniciar Sesion </a>
+                <a href="{% url 'registro_usuario' %}"> Registrar </a>
+            {% endif %}
+        </nav>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+<!-- bottom navbar  -->
+
+<nav class="bottom-navbar">
+    <a href="#home" class="fas fa-home"></a>
+    <a href="#featured" class="fas fa-list"></a>
+    <a href="#arrivals" class="fas fa-tags"></a>
+    <a href="#reviews" class="fas fa-comments"></a>
+</nav>
+
+<!-- login form  -->
+
+
+{% block contenido %}
+
+{% endblock %}
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Ubicaciones</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Guatemala </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Priximamente mas cerca de ti</a>
+        </div>
+
+        <div class="box">
+            <h3>Otras Opciones</h3>
+            <a href="{% url 'home' %}"> <i class="fas fa-arrow-right"></i> Inicio </a>
+            <a href="{% url 'galeria' %}"> <i class="fas fa-arrow-right"></i> Galeria </a>
+            <a href="{% url 'nuevo_libro' %}"> <i class="fas fa-arrow-right"></i> Nuevo Libro</a>
+            <a href="{% url 'listado_libros' %}"> <i class="fas fa-arrow-right"></i> Listado de libros</a>
+            <a href="{% url 'login' %}"> <i class="fas fa-arrow-right"></i> Inicio de sesion</a>
+        </div>
+        
+    </div>
+
+    <div class="share">
+        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+        <a href="https://instagram.com/" class="fab fa-instagram"></a>
+        <a href="https://www.pinterest.com/" class="fab fa-pinterest"></a>
+    </div>
+
+</section>
+
+
+
+
+
+
+{% block java %}
+{% endblock %}
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<!-- custom js file link  -->
+<script src="{% static 'core/js/script.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+
+</body>
+</html>
+
